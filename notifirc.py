@@ -13,7 +13,6 @@ db = SQLAlchemy(app)
 
 
 def init_db():
-    Base.metadata.drop_all(bind=db.engine)
     Base.metadata.create_all(bind=db.engine)
     db.session.commit()
 
